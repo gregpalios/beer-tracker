@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS `capstone`.`ratings` (
+  `rating_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `beer_id` INT(11) NULL DEFAULT NULL,
+  `date` DATE NULL DEFAULT NULL,
+  `rating` INT(11) NULL DEFAULT NULL,
+  `tasting_notes` MEDIUMTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`rating_id`),
+  INDEX `beer_idx` (`beer_id` ASC) VISIBLE,
+  CONSTRAINT `beer`
+    FOREIGN KEY (`beer_id`)
+    REFERENCES `capstone`.`beer` (`beer_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 26
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci
+COMMENT = 'Table for storing a list of beer ratings'

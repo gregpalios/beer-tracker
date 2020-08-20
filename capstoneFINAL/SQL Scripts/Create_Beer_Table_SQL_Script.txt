@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS `capstone`.`beer` (
+  `beer_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL DEFAULT NULL,
+  `brewery` VARCHAR(45) NULL DEFAULT NULL,
+  `type` VARCHAR(45) NULL DEFAULT NULL,
+  `abv` DECIMAL(10,1) NULL DEFAULT NULL,
+  `serving_temperature` VARCHAR(45) NULL DEFAULT NULL,
+  `first_brewed` VARCHAR(4) NULL DEFAULT NULL,
+  `country` VARCHAR(45) NULL DEFAULT NULL,
+  `history` LONGTEXT NULL DEFAULT NULL,
+  PRIMARY KEY (`beer_id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 17
+DEFAULT CHARACTER SET = latin1
+COMMENT = 'This table contains information concerning different beers from around the world.'
